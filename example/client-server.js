@@ -5,6 +5,10 @@
  * The XML-RPC server is a basic parameter server. It exposes getter and setter
  * methods to get and set different data types. The XML-RPC client can then set
  * and get these values using method calls.
+ *
+ * TODO: This example is not functional at the moment, since the server code
+ * has been removed from this fork. The example should be updated to use the
+ * original server code, but the new client code.
  */
 
 var fs     = require('fs')

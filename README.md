@@ -1,14 +1,16 @@
 ## The What
 
-The xmlrpc module is a pure JavaScript XML-RPC server and client for node.js.
+This is a fork of the xmlrpc module to allow XML-RPC calls from the browser.
+This is a pure JavaScript XML-RPC client that can both be used in node.js
+and in the browser through pakmanager.
 
-Pure JavaScript means that the [XML
-parsing](https://github.com/robrighter/node-xml) and [XML
-building](https://github.com/robrighter/node-xml) use pure JavaScript libraries,
-so no extra C dependencies or build requirements. The xmlrpc module can be used
-as an XML-RPC server, receiving method calls and responding with method
-responses, or as an XML-RPC client, making method calls and receiving method
-responses, or as both.
+Pure JavaScript means that the
+[XML parsing](https://github.com/robrighter/node-xml) and
+[XML building](https://github.com/robrighter/node-xml) use pure JavaScript
+libraries, so no extra C dependencies or build requirements. Furthermore,
+core node.js modules are only required for testing, not for deployment.
+The server functionality of the original xmlrpc module has been disabled
+because this is non-trivial for browsers.
 
 
 ## The How
@@ -23,6 +25,10 @@ npm install xmlrpc
 
 The client-server.js in the example directory has an nicely commented example of
 using xmlrpc as an XML-RPC server and client (they even talk to each other!).
+
+TODO: This is still an example from the original XML-RPC module and does not work
+at the moment. It is kept because it might be possible to convert it such that
+it uses the original server, but the forked client.
 
 A brief example:
 
@@ -68,9 +74,6 @@ Method response for 'anAction': aResult
 ```
 
 ### To Test
-
-[![Build
-Status](https://secure.travis-ci.org/baalexander/node-xmlrpc.png)](http://travis-ci.org/baalexander/node-xmlrpc)
 
 XML-RPC must be precise so there are an extensive set of test cases in the test
 directory. [Vows](http://vowsjs.org/) is the testing framework and [Travis

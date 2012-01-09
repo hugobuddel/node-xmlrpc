@@ -1,3 +1,6 @@
+## 0.9.2 / 2012-01-09
+
+ * Fork to create a client-only browser version.
 
 ## 0.9.2 / 2011-12-10
 
